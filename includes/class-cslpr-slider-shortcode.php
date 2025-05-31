@@ -12,10 +12,9 @@ class Cslpr_Slider_Shortcode {
     }
 
     public function render_slider_shortcode( $atts ) {
-        // Enqueue CSS and JS only when the shortcode is used
+
         Cslpr_Slider_Assets::enqueue_frontend_assets();
 
-        // Output buffering
         ob_start();
 
         $query = new \WP_Query([
